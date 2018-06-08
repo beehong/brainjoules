@@ -52,16 +52,16 @@ App.game = App.cable.subscriptions.create("GameChannel",{
   			question.innerHTML = data.question
   			let option1 = document.getElementById("option1")
   			option1.innerHTML = data.option1
-  			option1.style.color = "black"
+  			option1.style.color = "white"
   			let option2 = document.getElementById("option2")
   			option2.innerHTML = data.option2
-  			option2.style.color = "black"
+  			option2.style.color = "white"
   			let option3 = document.getElementById("option3")
   			option3.innerHTML = data.option3
-  			option3.style.color = "black"
+  			option3.style.color = "white"
   			let option4 = document.getElementById("option4")
   			option4.innerHTML = data.option4
-  			option4.style.color = "black"
+  			option4.style.color = "white"
   			$("#q_number").html(data.q_number)
   			 
 

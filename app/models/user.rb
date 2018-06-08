@@ -3,6 +3,7 @@ class User < ApplicationRecord
   has_many :teachers
   has_many :students
   belongs_to :room, optional: true
+  validates :email, presence:true, uniqueness: true
 
   enum role: [:admin, :teacher, :student]
 

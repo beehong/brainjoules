@@ -18,11 +18,13 @@ class UsersController < Clearance::UsersController
     user_params = params[:user] || Hash.new
     email = user_params.delete(:email)
     password = user_params.delete(:password)
+    role = user_params.delete(:role)
     
 
     Clearance.configuration.user_model.new(user_params).tap do |user|
       user.email = email
       user.password = password
+      user.role = role
   	end
  end
 
